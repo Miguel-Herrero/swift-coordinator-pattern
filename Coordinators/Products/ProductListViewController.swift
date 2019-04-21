@@ -8,33 +8,24 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController {
+class ProductListViewController: UIViewController, Storyboarded {
+
+    // MARK: - Variables
+
+    weak var coordinator: AppCoordinator?
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+
+    // MARK: - Actions
 
     @IBAction func unwindToProductList(segue: UIStoryboardSegue) { }
 
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "BuyProduct1" {
-            let vc = segue.destination as! ThankYouViewController
-            vc.productId = "One"
-        } else if segue.identifier == "BuyProduct2" {
-            let vc = segue.destination as! ThankYouViewController
-            vc.productId = "Two"
-        } else if segue.identifier == "BuyProduct3" {
-            let vc = segue.destination as! ThankYouViewController
-            vc.productId = "Three"
-        }
-    }
-
+    @IBAction func loginTapped(_ sender: Any) { coordinator?.login() }
+    @IBAction func buyProductOneTapped(_ sender: Any) { coordinator?.buyProduct(id: "One") }
+    @IBAction func buyProductTwoTapped(_ sender: Any) { coordinator?.buyProduct(id: "Two") }
+    @IBAction func buyProductThreeTapped(_ sender: Any) { coordinator?.buyProduct(id: "Three") }
 }
