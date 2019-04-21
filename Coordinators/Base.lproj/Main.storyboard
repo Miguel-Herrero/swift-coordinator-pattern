@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KfO-2k-95N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Products" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdb-Kf-HyC">
-                                <rect key="frame" x="119.5" y="64" width="175" height="32"/>
+                                <rect key="frame" x="120" y="64" width="174.5" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,28 +28,28 @@
                                 <rect key="frame" x="158" y="206" width="98" height="30"/>
                                 <state key="normal" title="Buy Product 2"/>
                                 <connections>
-                                    <segue destination="IfP-pk-sJ5" kind="show" identifier="BuyProduct2" id="GjX-Tb-IoY"/>
+                                    <action selector="buyProductTwoTapped:" destination="KfO-2k-95N" eventType="touchUpInside" id="GX8-0D-byr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WL5-At-iX6">
                                 <rect key="frame" x="158" y="256" width="98" height="30"/>
                                 <state key="normal" title="Buy Product 3"/>
                                 <connections>
-                                    <segue destination="IfP-pk-sJ5" kind="show" identifier="BuyProduct3" id="Fcy-TM-5TG"/>
+                                    <action selector="buyProductThreeTapped:" destination="KfO-2k-95N" eventType="touchUpInside" id="jjz-ku-9ws"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYc-qU-3iy">
                                 <rect key="frame" x="356" y="64" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="8AQ-UZ-Uyy" kind="show" identifier="Login" id="air-g8-fhZ"/>
+                                    <action selector="loginTapped:" destination="KfO-2k-95N" eventType="touchUpInside" id="hSe-fJ-BiU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re4-Ip-26x">
                                 <rect key="frame" x="159" y="156" width="96" height="30"/>
                                 <state key="normal" title="Buy Product 1"/>
                                 <connections>
-                                    <segue destination="IfP-pk-sJ5" kind="show" identifier="BuyProduct1" id="FLx-6w-3cs"/>
+                                    <action selector="buyProductOneTapped:" destination="KfO-2k-95N" eventType="touchUpInside" id="Knb-ip-cxX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,6 +57,7 @@
                         <constraints>
                             <constraint firstItem="WL5-At-iX6" firstAttribute="top" secondItem="eRT-08-rpL" secondAttribute="bottom" constant="20" id="3a4-O4-Sx4"/>
                             <constraint firstItem="eRT-08-rpL" firstAttribute="centerX" secondItem="hag-SK-6XC" secondAttribute="centerX" id="4mu-7e-BBJ"/>
+                            <constraint firstItem="QYc-qU-3iy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vdb-Kf-HyC" secondAttribute="trailing" constant="1" id="90P-dL-bNE"/>
                             <constraint firstItem="Xc5-wX-dIk" firstAttribute="trailing" secondItem="QYc-qU-3iy" secondAttribute="trailing" constant="20" id="TH8-ls-qR0"/>
                             <constraint firstItem="QYc-qU-3iy" firstAttribute="top" secondItem="Xc5-wX-dIk" secondAttribute="top" constant="20" id="cBd-3W-37n"/>
                             <constraint firstItem="Vdb-Kf-HyC" firstAttribute="centerX" secondItem="hag-SK-6XC" secondAttribute="centerX" id="dyD-9S-oEc"/>
@@ -103,13 +104,11 @@
                                 <rect key="frame" x="188" y="256" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sun-Sk-mlz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sun-Sk-mlz">
                                 <rect key="frame" x="183" y="306" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelLoginTapped:" destination="8AQ-UZ-Uyy" eventType="touchUpInside" id="uWH-ep-tEQ"/>
-                                    <segue destination="oLG-qZ-LVe" kind="unwind" identifier="unwindSegueToProductList" unwindAction="unwindToProductListWithSegue:" id="VCL-PM-DS4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,8 +118,10 @@
                             <constraint firstItem="kHT-Yx-MPi" firstAttribute="top" secondItem="sI5-uP-u7g" secondAttribute="bottom" constant="60" id="CpE-Oe-c9r"/>
                             <constraint firstItem="sI5-uP-u7g" firstAttribute="centerX" secondItem="5oe-Ei-U4i" secondAttribute="centerX" id="DYo-Q2-JFq"/>
                             <constraint firstItem="8QF-2e-cCZ" firstAttribute="leading" secondItem="4te-4q-LsF" secondAttribute="leading" constant="20" id="Q7v-uQ-9qF"/>
+                            <constraint firstItem="Sun-Sk-mlz" firstAttribute="centerX" secondItem="5oe-Ei-U4i" secondAttribute="centerX" id="VD6-ma-pIM"/>
                             <constraint firstItem="gkF-P3-UU8" firstAttribute="top" secondItem="8QF-2e-cCZ" secondAttribute="bottom" constant="20" id="WNd-R6-G4E"/>
                             <constraint firstItem="8QF-2e-cCZ" firstAttribute="top" secondItem="kHT-Yx-MPi" secondAttribute="bottom" constant="20" id="gD5-Ff-l5q"/>
+                            <constraint firstItem="Sun-Sk-mlz" firstAttribute="top" secondItem="gkF-P3-UU8" secondAttribute="bottom" constant="20" id="kg0-x6-Gdx"/>
                             <constraint firstItem="kHT-Yx-MPi" firstAttribute="leading" secondItem="4te-4q-LsF" secondAttribute="leading" constant="20" id="pOk-HO-Fsk"/>
                             <constraint firstItem="4te-4q-LsF" firstAttribute="trailing" secondItem="8QF-2e-cCZ" secondAttribute="trailing" constant="20" id="qAy-zk-Zky"/>
                             <constraint firstItem="gkF-P3-UU8" firstAttribute="centerX" secondItem="5oe-Ei-U4i" secondAttribute="centerX" id="wyk-Ie-l9g"/>
@@ -130,7 +131,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXw-mo-dwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="oLG-qZ-LVe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1096" y="835"/>
         </scene>
@@ -159,7 +159,6 @@
                                 <state key="normal" title="Go to product list"/>
                                 <connections>
                                     <action selector="goToProductListTapped:" destination="IfP-pk-sJ5" eventType="touchUpInside" id="Stm-oA-39f"/>
-                                    <segue destination="r0X-2w-Xes" kind="unwind" identifier="unwindSegueToProductList" unwindAction="unwindToProductListWithSegue:" id="YXB-g2-2cH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -179,12 +178,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUf-Oi-Scx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="r0X-2w-Xes" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1854" y="112"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="GjX-Tb-IoY"/>
-    </inferredMetricsTieBreakers>
 </document>
