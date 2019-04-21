@@ -24,7 +24,6 @@ class ThankYouViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         if let productId = productId {
             thankYouMessage.text = "You just bought product \(productId)"
         }

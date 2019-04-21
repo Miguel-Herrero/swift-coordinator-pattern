@@ -22,8 +22,6 @@ class ProductListViewController: UIViewController, Storyboarded {
 
     // MARK: - Actions
 
-    @IBAction func unwindToProductList(segue: UIStoryboardSegue) { }
-
     @IBAction func loginTapped(_ sender: Any) { coordinator?.login() }
     @IBAction func buyProductOneTapped(_ sender: Any) { coordinator?.buyProduct(id: "One") }
     @IBAction func buyProductTwoTapped(_ sender: Any) { coordinator?.buyProduct(id: "Two") }

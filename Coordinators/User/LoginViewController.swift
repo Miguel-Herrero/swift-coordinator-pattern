@@ -14,8 +14,6 @@ class LoginViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func cancelLoginTapped(_ sender: Any) { coordinator?.routeToProductList() }
