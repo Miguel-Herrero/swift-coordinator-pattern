@@ -10,10 +10,16 @@ import UIKit
 
 class ThankYouViewController: UIViewController {
 
+    var productId: String?
+    @IBOutlet weak var thankYouMessage: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let productId = productId {
+            thankYouMessage.text = "You just bought product \(productId)"
+        }
     }
     
     @IBAction func goToProductListTapped(_ sender: Any) {

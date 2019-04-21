@@ -17,16 +17,24 @@ class ProductListViewController: UIViewController {
     }
 
     @IBAction func unwindToProductList(segue: UIStoryboardSegue) { }
-    
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "BuyProduct1" {
+            let vc = segue.destination as! ThankYouViewController
+            vc.productId = "One"
+        } else if segue.identifier == "BuyProduct2" {
+            let vc = segue.destination as! ThankYouViewController
+            vc.productId = "Two"
+        } else if segue.identifier == "BuyProduct3" {
+            let vc = segue.destination as! ThankYouViewController
+            vc.productId = "Three"
+        }
     }
-    */
 
 }
